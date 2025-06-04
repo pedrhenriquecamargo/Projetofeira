@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feira de Profissões</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+ 
+<body>
+  <header>
+    <h1>Feira de Profissões</h1>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="flappy.html" target="_blank">Jogar</a>
+      <a href="#profissoes">Profissões</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#autores">Autores</a>
+      <button onclick="alternarTema()">🌙Tema</button>
+    </nav>
+  </header>
+ 
+
+
+
+
+  <section id="inicio" class="hero">
+    <h2>Bem-vindo à Feira de Profissões!</h2>
+    <p>Explore as apresentações de todas as turmas da escola.</p>
+    <a href="#profissoes" class="btn">Ver Profissões</a>
+  </section>
+ 
+  <select id="filtroArea"></select>
+  <section id="profissoes" class="cards">
+    <h2>Profissões Apresentadas</h2>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Pesquisar profissão..." onkeyup="filtrarCards()" />
+    </div>
+ 
+    <!-- <div class="carrossel-wrapper" style="position: relative; max-width: 1000px; margin: auto;">
+   Botão para voltar
+    <button id="btnPrev" class="btn-nav"
+      style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); z-index: 10; font-size: 2rem; background: none; border: none; cursor: pointer;">
+      ‹
+    </button>-->
+ 
+    <!-- Container horizontal do carrossel -->
+    <div class="card-container-horizontal">
+ 
+     <div class="card artes">
+        <h3>Design Gráfico<br>
+          6°A & B
+        </h3>
+        <button onclick="abrirModal('design grafico')">Saiba mais</button>
+      </div>
+ 
+      <div class="card artes">
+        <h3>Desenhista<br>
+          6°A & B </h3>
+        <button onclick="abrirModal('desenhista')">Saiba mais</button>
+      </div>
+ 
+      <div class="card artes">
+        <h3>Designer de Exposição<br>
+          6°A & B</h3>
+        <button onclick="abrirModal('designer de exposicao')">Saiba mais</button>
+      </div>
+ 
+      <div class="card artes">
+        <h3>Educador de Arte<br>
+          6°A & B</h3>
+        <button onclick="abrirModal('educador de arte')">Saiba mais</button>
+      </div>
+ 
+      <div class="card artes">
+        <h3>Curador de Arte<br>
+          6°A & B</h3>
+        <button onclick="abrirModal('curador de arte')">Saiba mais</button>
+      </div>
+ 
+      <div class="card artes">
+        <h3>Design Gráfico<br>
+          6°A & B</h3>
+        <button onclick="abrirModal('design grafico')">Saiba mais</button>
+      </div>
+ 
+      <div class="card artes">
+        <h3>Fotografo<br>
+          6°A & B</h3>
+        <button onclick="abrirModal('fotografo')">Saiba mais</button>
+      </div>
+ 
+      <div class="card artes">
+        <h3>Coreógrafo/Dançarino<br>
+          6°A & B</h3>
+        <button onclick="abrirModal('coreografo')">Saiba mais</button>
+      </div>
+      <div class="card artes">
+        <h3>Ator<br>
+          6°A & B</h3>
+        <button onclick="abrirModal('ator')">Saiba mais</button>
+      </div>
+ 
+      <div class="card artes">
+        <h3>Artesão<br>
+          6°A & B</h3>
+        <button onclick="abrirModal('artesao')">Saiba mais</button>
+      </div>
+ 
+      <div class="card artes">
+        <h3>Ilustrador<br>
+          6°A & B</h3>
+        <button onclick="abrirModal('ilustrador')">Saiba mais</button>
+      </div>
+ 
+      <div class="card artes">
+        <h3>Maquiador Profissional<br>
+          6°A & B</h3>
+        <button onclick="abrirModal('maquiador profissional')">Saiba mais</button>
+      </div>
+ 
+      <div class="card artes">
+        <h3>Artista Plástico<br>
+          6°A & B</h3>
+        <button onclick="abrirModal('artista plastico')">Saiba mais</button>
+      </div>
+ 
+      <div class="card ciencias humanas">
+        <h3>Direito<br>
+          7°Ano</h3>
+        <button onclick="abrirModal('direito')">Saiba mais</button>
+      </div>
+ 
+      <div class="card ciencias humanas">
+        <h3>Filosofia<br>
+          7°Ano</h3>
+        <button onclick="abrirModal('filosofia')">Saiba mais</button>
+      </div>
+ 
+      <div class="card ciencias humanas">
+        <h3>Jornalista<br>
+          7°Ano</h3>
+        <button onclick="abrirModal('jornalista')">Saiba mais</button>
+      </div>
+ 
+      <div class="card militares">
+        <h3>Aeronaútica<br>
+          9°ano</h3>
+        <button onclick="abrirModal('aeronautica')">Saiba mais</button>
+      </div>
+ 
+      <div class="card militares">
+        <h3>Marinha<br>
+          9°ano</h3>
+        <button onclick="abrirModal('marinha')">Saiba mais</button>
+      </div>
+ 
+      <div class="card militares">
+        <h3>Exército<br>
+          9°ano
+        </h3>
+        <button onclick="abrirModal('exercito')">Saiba mais</button>
+      </div>
+ 
+      <div class="card militares">
+        <h3>Policia Militar<br>
+          9°ano</h3>
+        <button onclick="abrirModal('policia militar')">Saiba mais</button>
+      </div>
+
+      <div class="card engenharia">
+        <h3>Engenharia<br>
+        1°A </h3>
+        <button onclick="abrirModal('engenharia')">Saiba mais</button>
+      </div>
+ 
+      <div class="card engenharia">
+        <h3>Engenharia Civil<br>
+        1°A</h3>
+        <button onclick="abrirModal('engenharia civil')">Saiba mais</button>
+      </div>
+ 
+      <div class="card engenharia">
+        <h3>Engenharia Mecânica<br>
+        1°A</h3>
+        <button onclick="abrirModal('engenharia mecanica')">Saiba mais</button>
+      </div>
+ 
+      <div class="card engenharia">
+        <h3>Engenharia Eletrônica<br>
+        1°A</h3>
+        <button onclick="abrirModal('engenharia eletronica')">Saiba mais</button>
+      </div>
+ 
+ 
+      <div class="card saude">
+        <h3>Nutricionista<br>
+   1°B</h3>
+        <button onclick="abrirModal('nutricionista')">Saiba mais</button>
+      </div>
+ 
+      <div class="card saude">
+        <h3>Medicina<br>
+     1°B</h3>
+        <button onclick="abrirModal('medicina')">Saiba mais</button>
+      </div>
+ 
+      <div class="card saude">
+        <h3>Psicologia<br>
+     1°B</h3>
+        <button onclick="abrirModal('psicologia')">Saiba mais</button>
+      </div>
+ 
+      <div class="card saude">
+        <h3>Fisioterapia<br>
+      1°B</h3>
+        <button onclick="abrirModal('fisioterapia')">Saiba mais</button>
+      </div>
+ 
+      <div class="card saude">
+        <h3>Enfermermagem<br>
+       1°B</h3>
+        <button onclick="abrirModal('enfermagem')">Saiba mais</button>
+      </div>
+ 
+      <div class="card saude">
+        <h3>Veterinaria<br>
+        1°B</h3>
+        <button onclick="abrirModal('veterinaria')">Saiba mais</button>
+      </div>
+ 
+      <div class="card negocios e vendas">
+        <h3>Administração<br>
+        2°A & 2°B</h3>
+        <button onclick="abrirModal('administracao')">Saiba mais</button>
+      </div>
+ 
+      <div class="card negocios e vendas">
+        <h3>Marketing<br>
+        2°A & 2°B</h3>
+        <button onclick="abrirModal('marketing')">Saiba mais</button>
+      </div>
+ 
+      <div class="card negocios e vendas">
+        <h3>Logistica<br>
+        2°A & 2°B</h3>
+        <button onclick="abrirModal('logistica')">Saiba mais</button>
+      </div>
+ 
+      <div class="card tecnologia">
+        <h3>Pericia Criminal<br>
+        3°A & 3°B</h3>
+        <button onclick="abrirModal('pericia criminal')">Saiba mais</button>
+      </div>
+ 
+      <div class="card tecnologia">
+        <h3>Astronomia<br>
+        3°A & 3°B</h3>
+        <button onclick="abrirModal('astronomia')">Saiba mais</button>
+      </div>
+ 
+      <div class="card tecnologia">
+        <h3>Programação de Jogos<br>
+        3°A & 3°B</h3>
+        <button onclick="abrirModal('programacao de jogos')">Saiba mais</button>
+      </div>
+ 
+      <div class="card tecnologia">
+        <h3>Engenharia Biomédica<br>
+        3°A & 3°B</h3>
+        <button onclick="abrirModal('engenharia biomedica')">Saiba mais</button>
+      </div>
+ 
+      <div class="card tecnologia">
+        <h3>Gastronomia<br>
+        3°A & 3°B</h3>
+        <button onclick="abrirModal('pericia criminal')">Saiba mais</button>
+      </div>
+ 
+    </div>
+ 
+    <!-- Botão para avançar
+    <button id="btnNext" class="btn-nav"
+      style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); z-index: 10; font-size: 2rem; background: none; border: none; cursor: pointer;">
+      ›
+    </button>-->
+    </div>
+  </section>
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <p>
+      Este site foi criado pelos alunos Italo Lemos e Pedro Henrique do 3º ano do Ensino Médio como parte do projeto da
+      Feira de Profissões de 2025 da nossa escola. O objetivo é apresentar de forma clara e interativa os temas
+      trabalhados por cada turma, ajudando outros estudantes a conhecerem melhor diferentes áreas profissionais e a se
+      inspirarem na escolha de suas futuras carreiras. O projeto foi desenvolvido utilizando HTML, CSS e JavaScript, com
+      dedicação dos alunos e apoio dos professores. Agradecemos especialmente à professora Marcia, que nos orientou e à
+      coordenação escolar pelo incentivo. Este trabalho representa nosso esforço e nossa vontade de compartilhar
+      conhecimento com toda a comunidade escolar.
+    </p>
+ 
+  </section>
+  <section id="autores" class="autores">
+    <h2>Autores</h2>
+    <div class="autores-container">
+      <div class="autor">
+        <img src="pedro.jpg" alt="Foto do Pedro">
+        <p>Pedro Henrique</p>
+      </div>
+      <div class="autor">
+        <img src="italo.jfif" alt="Foto do Ítalo">
+        <p>Italo Lemos</p>
+      </div>
+    </div>
+  </section>
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="fecharModal" class="fechar">&times;</span>
+      <p id="modalTexto"></p>
+    </div>
+  </div>
+  <footer>
+    <p>Created by<br>
+      <br>Italo Lemos and Pedro Henrique with support <br>PEI E. E. Profª Maria Aparecida
+    </p>
+ 
+    <br><br>
+  </footer>
+ 
+  <script src="script.js"></script>
+</body>
+ 
+</html>
